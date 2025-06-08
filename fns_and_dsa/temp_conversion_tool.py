@@ -20,7 +20,7 @@ elif temp_type == "F":
   print(f"{temperature_input}\N{DEGREE SIGN}F is {result}\N{DEGREE SIGN}C")
 
 else:
-  print("Invalid temperature. Please enter a numeric value")
+  print("Invalid temperature. Please enter a numeric value.")
 
 
 
