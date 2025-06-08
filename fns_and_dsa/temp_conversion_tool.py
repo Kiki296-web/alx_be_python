@@ -9,15 +9,15 @@ def convert_to_fahrenheit(celsius):
     return  (celsius*CELSIUS_TO_FAHRENHEIT_FACTOR)+32
 
 temperature_input = float(input("Enter the temperature to convert:"))
-temp_type = input("Is the temperature in Celsius or Fahrenheit? (C/F): ")
+temp_type = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
 
 if temp_type == "C":
   result = convert_to_fahrenheit(temperature_input)
-  print(f"{temperature_input}\N{DEGREE SIGN}C is {result:.2f}\N{DEGREE SIGN}F")
-  
+  print(f"{temperature_input}\N{DEGREE SIGN}C is {result}\N{DEGREE SIGN}F")
+
 elif temp_type == "F":
   result = convert_to_celsius(temperature_input)
-  print(f"{temperature_input}\N{DEGREE SIGN}F is {result:.2f}\N{DEGREE SIGN}C")
+  print(f"{temperature_input}\N{DEGREE SIGN}F is {result}\N{DEGREE SIGN}C")
 
 else:
   print("Invalid temperature. Please enter a numeric value")
