@@ -8,15 +8,16 @@ class BankAccount:
         self.account_balance += amount
 
 
+
     def withdraw(self, amount):
         self.account_balance -= amount
         if self.account_balance < 0:
-            raise ValueError("Insufficient funds for withdrawal")
+            raise ValueError("Insufficient funds.")
         else:
             return self.account_balance
         
     def display_balance(self):
-        return f"Current balance: ${self.account_balance:.2f}"
+        return f"Current Balance: ${self.account_balance:.2f}"
        
         
    
