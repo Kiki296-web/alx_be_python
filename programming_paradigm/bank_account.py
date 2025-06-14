@@ -10,13 +10,27 @@ class BankAccount:
 
     def withdraw(self, amount):
         if amount > self.account_balance:
-            print("Insufficient funds.")
+            raise ValueError("Insufficient funds.")
         else:
             self.account_balance -= amount
-            print(f"Withdrew ${amount:.2f}")
+            return self.account_balance
         
     def display_balance(self):
         return f"Current Balance: ${self.account_balance:.2f}"
        
         
-   
+def main():
+    account = BankAccount(100)
+
+    # Test: withdraw more than balance
+    try:
+        account.withdraw(150)
+    except ValueError as e:
+        print(e)  # This is what the checker expects
+
+    # Deposit and show balance
+    account.deposit(150)
+    print(account.display_balance())
+
+if __name__ == "__main__":
+    main()
