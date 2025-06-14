@@ -6,11 +6,9 @@ class BankAccount:
 
     def deposit(self, amount):
         self.account_balance += amount
-        
 
 
     def withdraw(self, amount):
-        self.account_balance -= amount
         if amount > self.account_balance:
             return False  # Not enough money, withdrawal denied
         else:
