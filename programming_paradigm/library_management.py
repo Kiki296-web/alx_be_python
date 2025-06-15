@@ -14,6 +14,7 @@ class Book:
 
     def is_checked_out(self):
         return self.__is_checked_out
+    
         
 
 class Library:
@@ -26,15 +27,15 @@ class Library:
         print(f"Book added: {book}")
 
     def check_out_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title.lower() == title.lower() and not book.is_checked_out():
                 book.check_out()
                 print(f"Book checked out: {book}")
                 return
         print("Book not available or already checked out.")
 
-    def return_book(self, title):
-        for book in self.books:
+    def return_book(self, book):
+        for book in self._books:
             if book.title.lower() == title.lower() and book.is_checked_out():
                 book.return_book()
                 print(f"Book returned: {book}")
