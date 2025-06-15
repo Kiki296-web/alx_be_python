@@ -19,7 +19,7 @@ class Book:
 
 class Library:
     def __init__(self):
-        self.books = []
+        self._books = []
 
     def add_book(self, book):
         """Add a book to the library."""
@@ -34,7 +34,7 @@ class Library:
                 return
         print("Book not available or already checked out.")
 
-    def return_book(self, book):
+    def return_book(self, title):
         for book in self._books:
             if book.title.lower() == title.lower() and book.is_checked_out():
                 book.return_book()
