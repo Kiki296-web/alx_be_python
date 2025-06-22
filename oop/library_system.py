@@ -3,8 +3,12 @@ class Book:
         self.title = title
         self.author = author
     
+    
     def details(self):
         return f"Book: {self.title} by {self.author}"
+    
+    def __str__(self):
+        return self.details() 
 
 class EBook(Book):
     def __init__(self, title, author, file_size):
